@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}天狼世佳用户注册{% endblock title %}
+{% block header_con %}{% endblock header_con %}
+{% block search_bar %}{% endblock search_bar %}
+{% block body %}
+    	<div class="register_con">
+		<div class="l_con fl">
+			<a class="reg_logo"><img src="{% static 'images/logo.png' %}"></a>
+			<div class="reg_slogan">潮流时尚  ·  尽在天狼世佳</div>
+			<div class="reg_banner"></div>
+		</div>
+		<div class="r_con fr">
+			<div class="reg_title clearfix">
+				<h1>用户注册</h1>
+				<a href="{% url 'user:login' %}">登录</a>
+			</div>
+			<div class="reg_form clearfix">
+                <form action="" method="post" novalidate>
+                    {% csrf_token %}
+                    <ul>
+                        <li>
+                            <label>用户名</label>
+                            {{ form.username }} <span>{{ form.username.errors.0 }}</span>
+                        </li>
+                        <li>
+                            <label>邮箱</label>
+                            {{ form.email }} <span>{{ form.email.errors.0 }}</span>
+                        </li>
+                        <li>
+                            <label>密码</label>
+                            {{ form.password }} <span>{{ form.password.errors.0 }}</span>
+                        </li>
+                        <li>
+                            <label>确认密码</label>
+                            {{ form.r_password }} <span>{{ clean_errors.0 }}</span>
+                        </li>
+                        <li class="agreement">
+						    <input type="checkbox" checked="checked">
+						    <label>同意《天狼世佳用户使用协议》</label>
+					    </li>
+                        <li class="reg_sub">
+                            <input type="submit" value="注册" >
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        </div>
+{% endblock body %}
+{#通过form对象的as_p方法实现#}
+{#<form action="" method="post" novalidate>#}
+{#    {% csrf_token %}#}
+{#    {{ form.as_p }}#}
+{#    <input type="submit">#}
+{#</form>#}
+
