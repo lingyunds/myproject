@@ -20,7 +20,7 @@ django.setup()
 from apps.goods.models import IndexGoodsBanner,IndexPromotionBanner,GoodsType,IndexTypeGoodsBanner
 
 #创建对象并指定任务中间人
-app = Celery('celery_tasks.tasks',broker='redis://:123456@117.173.89.125:6379/2')
+app = Celery('celery_tasks.tasks',broker='redis://:123456@117.173.79.125:6379/2')
 
 @app.task
 def send_register_mail(email,username,token):
