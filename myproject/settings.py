@@ -89,7 +89,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myproject',
-        'HOST': '192.168.2.101',
+        'HOST': '117.173.79.125',
         'PORT': '3306',
         'USER': 'root',
         'PASSWORD': '123456'
@@ -166,7 +166,7 @@ EMAIL_FROM = '天狼世佳<200826704@qq.com>'
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://:123456@192.168.2.105:6379/3",
+        "LOCATION": "redis://:123456@117.173.89.125:6379/3",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -183,7 +183,7 @@ LOGIN_URL = '/user/login'
 DEFAULT_FILE_STORAGE='utils.fdfs.storage.FDFSStorage'
 
 FDFS_CLIENT_CONF='./utils/fdfs/client.conf'
-FDFS_URL='http://192.168.2.105:8080/'
+FDFS_URL='http://117.173.79.184:8080/'
 
 HAYSTACK_CONNECTIONS = {
     'default': {
