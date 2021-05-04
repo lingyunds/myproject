@@ -166,7 +166,7 @@ EMAIL_FROM = '天狼世佳<200826704@qq.com>'
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://:123456@117.173.89.125:6379/3",
+        "LOCATION": "redis://:123456@117.173.79.125:6379/3",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
